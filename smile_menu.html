@@ -90,7 +90,7 @@
                 color: black
             }
 
-            a.news_a:hover{
+            a.news_a:hover {
                 color: gray;
                 background-color: #FFD700;
             }
@@ -103,7 +103,42 @@
                 box-sizing: border-box
             }
 
-            
+            .tyContainer {
+                border: 2px solid white;
+                width: 100px;
+                position: fixed;
+                z-index: 1;
+            }
+
+            .tyLeftSide {
+                left: 0;
+                top: 10vh;
+            }
+
+            .tyContainer div {
+                border: 1px solid white;
+                color: white;
+                background-color: black;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .tyContainer a div:hover {
+                background-color: #f44336;
+            }
+
+            .tyContainer a {
+                text-decoration: none;
+            }
+
+            .tyContainer .tyTitle {
+                background-color: gray;
+                height: 50px;
+            }
+
 
             /* Style the tab */
             .tab {
@@ -170,15 +205,27 @@
         </ul>
     </div>
     <br><br><br><br><br><br><br>
+    <div class="tyContainer tyLeftSide">
+        <div class="tyTitle">快速查詢</div>
+        <a href="#">
+            <div>機票資訊</div>
+        </a>
+        <a href="#">
+            <div>訂房資訊</div>
+        </a>
+        <a href="#">
+            <div>租車資訊</div>
+        </a>
+    </div>
     <h1 style="text-align: center;border-left: 8px solid #FFD700;
     display: flex;margin: 0px 0px 0px 700px;">MENU</h1>
     <br><br><br><br><br><br><br>
     <img src="./image/menu.png" alt="" style="display: block;
     width: 80%;height: 80%;margin: 0px 0px 0px 150px;">
-    
+
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
-        <!-- <div class="tab">
+
+    <!-- <div class="tab">
             <button class="tablinks" onclick="openCity(event, 'London')" style="font-size: 22px;">London</button>
             <button class="tablinks" onclick="openCity(event, 'Paris')" style="font-size: 22px;">Paris</button>
             <button class="tablinks" onclick="openCity(event, 'Tokyo')" style="font-size: 22px;">Tokyo</button>
@@ -197,35 +244,33 @@
             <h3 style="font-size: 22px;">Tokyo</h3>
             <p style="font-size: 18px;">Tokyo is the capital of Japan.</p>
         </div> -->
-        <a href="#home">
-            <img id="totop" 
-            style="width: 5%; height: 7%;position: relative;
-            bottom: 60px;right: -720px;border: 1px solid black;width: 40px;height: 40px;"
-            src="./image/totop.png" alt=""></a>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="copyright" 
-        style="text-align: center; background-color: #FFD700;border-radius: 50px 50px;">
-            Copyright &copy 2023 SMILE
+    <a href="#home">
+        <img id="totop" style="width: 5%; height: 7%;position: relative;
+            bottom: 60px;right: -720px;border: 1px solid black;width: 40px;height: 40px;" src="./image/totop.png"
+            alt=""></a>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="copyright" style="text-align: center; background-color: #FFD700;border-radius: 50px 50px;">
+        Copyright &copy 2023 SMILE
 
-        </div>
+    </div>
 
 
-        <script>
+    <script>
 
-            function openCity(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
-        </script>
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 
 </body>
 
